@@ -3,20 +3,19 @@ import styled from "styled-components";
 import InfoBlock from "./components/InfoBlock";
 import RegistrationForm from "./components/RegistrationForm";
 
-const AppWrapper = styled.div`
+const StyledAppWrapper = styled.div`
   display: flex;
   width: 100%;
-  min-height: 100vh;
   padding: 2rem;
   background: #ffffff;
 `;
 
 const App: FC = () => {
   return (
-    <AppWrapper>
+    <StyledAppWrapper>
       <InfoBlock />
       <RegistrationForm />
-    </AppWrapper>
+    </StyledAppWrapper>
   );
 };
 
