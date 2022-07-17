@@ -13,6 +13,7 @@ const StyledInputBox = styled.div`
 
   .error-text {
     font-size: 12px;
+    padding-left: 15px;
   }
 `;
 
