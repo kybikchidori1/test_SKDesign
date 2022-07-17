@@ -59,6 +59,10 @@ const StyledRegistrationForm = styled.div`
 
     color: #828282;
   }
+
+  .select-add {
+    display: none;
+  }
 `;
 
 const RegistrationForm: FC = () => {
@@ -74,7 +78,20 @@ const RegistrationForm: FC = () => {
           </div>
           <div className="input-box">
             <span className="details">Название организации/студии</span>
-            <InputText type="text" placeholder="SK Design" />
+            <InputText
+              className="input-skdesign"
+              type="text"
+              placeholder="SK Design"
+              width="100%"
+            />
+          </div>
+          <div className="select-add">
+            <p>Показать дополнительные поля</p>
+            <span className="details">Получатель</span>
+            <InputText type="text" placeholder="ФИО" />
+            <select>
+              <option>Откуда узнали про нас?</option>
+            </select>
           </div>
           <button>Отправить заявку</button>
         </form>

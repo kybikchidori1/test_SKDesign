@@ -4,7 +4,12 @@ import { StyledInputText } from "./StyledInputText";
 interface InputTextProps {
   placeholder: string;
   type: string;
-  width?: number;
+  className?: string;
+  width?: string;
+  onBlur?: any;
+  name?: string;
+  value?: string;
+  onChange?: any;
 }
 
 const InputText: FC<InputTextProps> = (props) => {

@@ -8,21 +8,31 @@ interface InputTextStyleProps {
 
 export const StyledInputText = styled.input<InputTextStyleProps>`
   display: flex;
-  width: 180px;
   padding: 14px 13px;
   flex-wrap: wrap;
   background: #ffffff;
   border-radius: 8px;
+  border: 2px solid #e3e3e3;
 
   ${(props) =>
     props.active &&
     css`
-      border: 2px solid #e3e3e3; ;
+      &:focus {
+        outline: none;
+        border: 2px solid #0086a8;
+      }
     `}
+
   ${(props) =>
     props.error &&
     !props.active &&
     css`
-      border-color: red;
+      border-color: 2px solid #eb5e55;
+    `}
+
+    ${(props) =>
+    props.width &&
+    css`
+      width: ${props.width};
     `}
 `;
